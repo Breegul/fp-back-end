@@ -1,0 +1,21 @@
+h1 {
+    color: hotpink;
+    /* margin-bottom: 5px; */
+}
+#herd {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.goat {
+    border: 1px solid coral;
+}
+.old {
+    background-color: grey;
+}
+.young {
+    background-color: brown;
+}
+h2 {
+    margin: 5px;
+}
