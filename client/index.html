@@ -10,6 +10,22 @@
 </head>
 <body>
     <h1>Goats</h1>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required>
+        
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" required min="0">
+        
+        <label for="sex">Sex:</label>
+        <input type="text" name="sex" id="sex" required>
+        
+        <label for="colour">Favourite colour</label>
+        <input type="text" name="colour" id="colour" required>
+        
+        <input type="submit" value="Goatify">
+    </form>
+    <hr>
     <div id="herd"></div>
 </body>
 </html>

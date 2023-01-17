@@ -46,4 +46,34 @@ function birthGoats(data) {
 
 }
 
+document.querySelector("form").addEventListener("submit", (e)=>{
+    
+    e.preventDefault(); // Stop the form interfering
+
+    const goat = {
+        name: e.target.name.value,
+        age: e.target.age.value,
+        sex: e.target.sex.value,
+        favouriteColour: e.target.colour.value
+    } // Get all the data
+
+    // Make an options object for fetch
+    const options = {
+        method: "POST",
+        body: JSON.stringify(goat),
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+        }
+    }
+
+    fetch("http://localhost:3000/goats", options) // Fetch with options
+        .then(res => res.json()) // Extract the data
+        .then(data => birthGoats(data)) // Make a goat card with the data
+        .catch(err => {
+            console.log(err);
+            alert("Something went wrong!");
+        }) // Alternatively panic
+})
+
 callTheHerd();
